@@ -16,114 +16,17 @@ import {
   Transfer,
 } from '../..';
 import LocaleProvider from '..';
-import arEG from '../ar_EG';
-import azAZ from '../az_AZ';
-import bgBG from '../bg_BG';
-import caES from '../ca_ES';
-import csCZ from '../cs_CZ';
-import deDE from '../de_DE';
-import daDK from '../da_DK';
-import elGR from '../el_GR';
+
 import enGB from '../en_GB';
 import enUS from '../en_US';
 import esES from '../es_ES';
-import etEE from '../et_EE';
-import faIR from '../fa_IR';
-import fiFI from '../fi_FI';
-import frBE from '../fr_BE';
-import frFR from '../fr_FR';
-import gaIE from '../ga_IE';
-import heIL from '../he_IL';
-import hiIN from '../hi_IN';
-import hrHR from '../hr_HR';
-import huHU from '../hu_HU';
-import hyAM from '../hy_AM';
-import idID from '../id_ID';
-import isIS from '../is_IS';
-import itIT from '../it_IT';
-import jaJP from '../ja_JP';
-import knIN from '../kn_IN';
-import koKR from '../ko_KR';
-import kuIQ from '../ku_IQ';
-import lvLV from '../lv_LV';
-import mkMK from '../mk_MK';
-import mnMN from '../mn_MN';
-import msMY from '../ms_MY';
-import nbNO from '../nb_NO';
-import neNP from '../ne_NP';
-import nlBE from '../nl_BE';
-import nlNL from '../nl_NL';
-import plPL from '../pl_PL';
-import ptBR from '../pt_BR';
-import ptPT from '../pt_PT';
-import roRO from '../ro_RO';
-import ruRU from '../ru_RU';
-import skSK from '../sk_SK';
-import slSI from '../sl_SI';
-import srRS from '../sr_RS';
-import svSE from '../sv_SE';
-import taIN from '../ta_IN';
-import thTH from '../th_TH';
-import trTR from '../tr_TR';
-import ukUA from '../uk_UA';
-import viVN from '../vi_VN';
 import zhCN from '../zh_CN';
-import zhTW from '../zh_TW';
 
 const locales = [
-  azAZ,
-  arEG,
-  bgBG,
-  caES,
-  csCZ,
-  daDK,
-  deDE,
-  elGR,
   enGB,
   enUS,
   esES,
-  etEE,
-  faIR,
-  fiFI,
-  frBE,
-  frFR,
-  gaIE,
-  heIL,
-  hiIN,
-  hrHR,
-  huHU,
-  hyAM,
-  isIS,
-  itIT,
-  jaJP,
-  knIN,
-  koKR,
-  kuIQ,
-  mkMK,
-  msMY,
-  mnMN,
-  nbNO,
-  neNP,
-  nlBE,
-  nlNL,
-  plPL,
-  ptBR,
-  ptPT,
-  roRO,
-  ruRU,
-  skSK,
-  slSI,
-  srRS,
-  svSE,
-  taIN,
-  thTH,
-  trTR,
-  ukUA,
-  viVN,
-  idID,
-  lvLV,
   zhCN,
-  zhTW,
 ];
 
 const { Option } = Select;
@@ -250,7 +153,7 @@ describe('Locale Provider', () => {
     }
     const wrapper = mount(<Test />);
     expect(wrapper.render()).toMatchSnapshot();
-    wrapper.setState({ locale: frFR });
+    wrapper.setState({ locale: zhCN });
     expect(wrapper.render()).toMatchSnapshot();
     wrapper.setState({ locale: null });
     expect(wrapper.render()).toMatchSnapshot();

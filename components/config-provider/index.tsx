@@ -9,8 +9,6 @@ import LocaleProvider, { Locale, ANT_MARK } from '../locale-provider';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import { ConfigConsumer, ConfigContext, CSPConfig, ConfigConsumerProps } from './context';
 import { SizeType, SizeContextProvider } from './SizeContext';
-import message from '../message';
-import notification from '../notification';
 
 export { RenderEmptyHandler, ConfigContext, ConfigConsumer, CSPConfig, ConfigConsumerProps };
 
@@ -56,12 +54,6 @@ export interface ConfigProviderProps {
 const ConfigProvider: React.FC<ConfigProviderProps> = props => {
   React.useEffect(() => {
     if (props.direction) {
-      message.config({
-        rtl: props.direction === 'rtl',
-      });
-      notification.config({
-        rtl: props.direction === 'rtl',
-      });
     }
   }, [props.direction]);
 
